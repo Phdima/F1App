@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface OpenF1ApiService {
-    @GET("/drivers")
+    @GET("drivers?session_key=latest")
         suspend fun getDrivers(): Response<List<DriverDto>>
 }

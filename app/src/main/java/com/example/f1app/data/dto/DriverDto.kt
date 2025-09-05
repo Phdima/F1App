@@ -7,11 +7,11 @@ import java.util.Locale
 
 @JsonClass(generateAdapter = true)
 data class DriverDto(
-    @Json(name = "full_name") val name: String,
-    @Json(name = "team_name") val team: String,
-    @Json(name = "team_colour") val teamColor: String,
-    @Json(name = "headshot_url") val headShot: String?,
-    @Json(name = "country_code") val countryCode: Locale.IsoCountryCode
+    @param:Json(name = "full_name") val name: String,
+    @param:Json(name = "team_name") val team: String,
+    @param:Json(name = "team_colour") val teamColor: String,
+    @param:Json(name = "headshot_url") val headShot: String?,
+    @param:Json(name = "country_code") val countryCode: Locale.IsoCountryCode?
 ) {
     fun toDriverDomain(): DriverDomain {
         return DriverDomain(

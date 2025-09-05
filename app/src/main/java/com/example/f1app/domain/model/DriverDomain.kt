@@ -7,5 +7,5 @@ data class DriverDomain(
     val team: String,
     val teamColor: String,
     val headShot: String?,
-    val countryCode: Locale.IsoCountryCode
+    val countryCode: Locale.IsoCountryCode?
 )
