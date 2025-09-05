@@ -49,7 +49,7 @@ dependencies {
     implementation(libs.moshi.kotlin)
 
     // Кодогенерация для Moshi (опционально, но рекомендуется для производительности)
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.2")
+    ksp(libs.moshi.kotlin.codegen)
 
     // Retrofit - основная библиотека
     implementation(libs.retrofit2.retrofit)
@@ -67,8 +67,7 @@ dependencies {
     // Koin for Jetpack Compose
     implementation(libs.koin.androidx.compose)
 
-    // Koin for ViewModel
-    implementation(libs.koin.androidx.viewmodel)
+
 
     // Core
     implementation(libs.androidx.core.ktx)

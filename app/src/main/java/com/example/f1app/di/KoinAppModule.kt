@@ -12,7 +12,7 @@ import retrofit2.Retrofit
 
 val dataModule = module {
     single { MoshiBuilder.build() }
-    single { RetrofitBuilder.build(get(), "https://api.openf1.org/v1") }
+    single { RetrofitBuilder.build(get(), "https://api.openf1.org/v1/") }
     single { get<Retrofit>().create(OpenF1ApiService::class.java) }
     single<DriversRepo> { DriversRepoImpl(get()) }
 }
